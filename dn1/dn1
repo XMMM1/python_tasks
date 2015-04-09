@@ -1,0 +1,159 @@
+import re  #spliting lines
+import os  #manipulating with files
+
+input_file = "otac_goriot.txt"
+output_file = 'father_goriot_translation.txt'
+
+
+def deleteFile(file):
+    try:
+        os.remove(file)
+    except OSError:
+        pass
+
+
+def readFile(file):
+    hr = open(file, 'r')
+    hr_content = hr.read().lower()
+    hr.close()
+    return hr_content
+
+
+def writeToFile(file, content):
+    f = open(file, 'a')
+    f.write(content)
+    f.close()
+
+
+def prepareHrENDict():
+    f = open('hrvatsko-engleski.txt', 'r')
+    dictionary = {}
+    patt = re.compile('[^\t]+')
+    for line in f:
+        line = line.lower()
+        hrEnDict = patt.findall(line.rstrip())
+        dictionary[hrEnDict[0]] = hrEnDict[1]
+    return dictionary
+
+
+def translate(content):
+    print 'Translating file %s' % input_file
+    content = filter(None, re.split("[!?.]+", content))  #make each sentence in it's own item in list
+    for sentence in content:
+        sentenceList = sentence.split()
+        newSentence = []
+        for word in sentenceList:
+            if word in hrEn:
+                newSentence.append(hrEn[word])
+            else:
+                newSentence.append(word)
+
+        writeToFile(output_file, ' '.join(newSentence))
+        writeToFile(output_file, '. ')
+    print 'End of translation'  # print preparing dictionary HR-EN!
+
+
+def stat1(stat1Translated, stat1End):
+    for i in range(0, len(stat1Translated)):
+        sentence = stat1Translated[i]
+        sentence = sentence.split()
+        if len(stat1Eng) > i:
+            enSentende = stat1Eng[i].split()
+        else:
+            enSentende = ""
+
+        statTmp = str(i) + ' ' + str(len(enSentende))
+        en = 0
+        for word in sentence:
+            if word in enSentende:
+                en += 1
+        statTmp += ' ' + str(en) + "\n"
+        # print statTmp
+        writeToFile('statistika1.txt', statTmp)
+
+
+def stat2():
+    f1 = readFile('father_goriot.txt')
+    f2 = readFile('father_goriot_translation.txt')
+    f3 = readFile('otac_goriot.txt')
+
+    f1Sen = len(filter(None, re.split("[!?.]+", f1)))
+    f2Sen = len(filter(None, re.split("[!?.]+", f2)))
+    f3Sen = len(filter(None, re.split("[!?.]+", f3)))
+
+    f1Wor = f1.split()
+    f2Wor = f2.split()
+    f3Wor = f3.split()
+
+    #eng unique
+    enUniq = 0
+    for word in f2Wor:
+        if word not in f3Wor:
+            enUniq += 1
+
+    hrUniq = 0
+    for word in f3Wor:
+        if word not in f3Wor:
+            enUniq += 1
+
+    writeToFile('statistika2.txt', 'en  translated  cro\n')
+    writeToFile('statistika2.txt', str(f1Sen) + ' ' + str(f2Sen) + '  ' + str(f3Sen) + '\n')
+    writeToFile('statistika2.txt', str(len(f1Wor)) + ' ' + str(len(f1Wor)) + '  ' + str(len(f1Wor)) + '\n')
+    writeToFile('statistika2.txt', str(enUniq) + ' ' + '/' + '  ' + str(hrUniq))
+
+
+def translate1(hrEn,hrContent):
+    keys = list(hrEn.keys())
+    keys = sorted(keys, key=len)
+    keys = keys[::-1]
+    for sequence in keys:
+        if len(sequence) > 4:
+            hrContent = hrContent.replace(sequence, hrEn[sequence], 10000)
+
+    writeToFile('translated2.txt', hrContent)
+
+
+deleteFile(output_file)  #clear previous created files
+deleteFile('statistika1.txt')  #clear previous created files
+deleteFile('statistika2.txt')  #clear previous created files
+deleteFile('translated2.txt')  #clear previous created files
+#prepare dictionary
+hrEn = prepareHrENDict()
+#read content hr
+hrContent = readFile(input_file)  #read crFile
+
+
+
+#translate content
+translate(hrContent)
+translate1(hrEn,hrContent)
+enTranslatedContent = readFile(output_file)
+
+print 'Making statistic #1'
+enContent = readFile('father_goriot.txt')
+
+#---- list of sentences for translated and eng version
+stat1Translated = filter(None, re.split("[!?.]+", enTranslatedContent))  #we nave n croTranslated sentences
+stat1Eng = filter(None, re.split("[!?.]+", enContent))
+
+stat1(stat1Translated, stat1Eng)
+
+print 'Making statistic #2'
+stat2()
+
+#--------- #2 statistika
+# print 'Making statistic #1'
+# enContent = readFile('father_goriot.txt')
+# enTranslatedContent=readFile('translated2.txt')
+#
+# #---- list of sentences for translated and eng version
+# stat1Translated = filter(None, re.split("[!?.]+", enTranslatedContent))  #we nave n croTranslated sentences
+# stat1Eng = filter(None, re.split("[!?.]+", enContent))
+#
+# stat1(stat1Translated, stat1Eng)
+#
+# print 'Making statistic #2'
+# stat2()
+
+
+
