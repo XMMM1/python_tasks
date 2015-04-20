@@ -113,33 +113,33 @@ def translate1(hrEn,hrContent):
     writeToFile('translated2.txt', hrContent)
 
 
-deleteFile(output_file)  #clear previous created files
-deleteFile('statistika1.txt')  #clear previous created files
-deleteFile('statistika2.txt')  #clear previous created files
-deleteFile('translated2.txt')  #clear previous created files
-#prepare dictionary
-hrEn = prepareHrENDict()
-#read content hr
-hrContent = readFile(input_file)  #read crFile
-
-
-
-#translate content
-translate(hrContent)
-translate1(hrEn,hrContent)
-enTranslatedContent = readFile(output_file)
-
-print 'Making statistic #1'
-enContent = readFile('father_goriot.txt')
-
-#---- list of sentences for translated and eng version
-stat1Translated = filter(None, re.split("[!?.]+", enTranslatedContent))  #we nave n croTranslated sentences
-stat1Eng = filter(None, re.split("[!?.]+", enContent))
-
-stat1(stat1Translated, stat1Eng)
-
-print 'Making statistic #2'
-stat2()
+# deleteFile(output_file)  #clear previous created files
+# deleteFile('statistika1.txt')  #clear previous created files
+# deleteFile('statistika2.txt')  #clear previous created files
+# deleteFile('translated2.txt')  #clear previous created files
+# #prepare dictionary
+# hrEn = prepareHrENDict()
+# #read content hr
+# hrContent = readFile(input_file)  #read crFile
+#
+#
+#
+# #translate content
+# translate(hrContent)
+# translate1(hrEn,hrContent)
+# enTranslatedContent = readFile(output_file)
+#
+# print 'Making statistic #1'
+# enContent = readFile('father_goriot.txt')
+#
+# #---- list of sentences for translated and eng version
+# stat1Translated = filter(None, re.split("[!?.]+", enTranslatedContent))  #we nave n croTranslated sentences
+# stat1Eng = filter(None, re.split("[!?.]+", enContent))
+#
+# stat1(stat1Translated, stat1Eng)
+#
+# print 'Making statistic #2'
+# stat2()
 
 #--------- #2 statistika
 # print 'Making statistic #1'
