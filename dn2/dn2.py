@@ -52,8 +52,18 @@ def familyHouse(g, house_name):
     return ', '.join(house)
 
 
-def PersonFriendsByHouse(g, person):
-    return ''
+def personFriendsByHouse(g, person):
+    pe = {}
+    for name in person:
+        id = names.index(name)
+        node = g.node[str(id)]
+        if node:
+            if node['house'] in pe:
+                val = pe[node['house']]
+                pe[node['house']] = val + ',' + names[id]
+            else:
+                pe[node['house']] = names[id]
+    return pe
 
 
 def mostPopulatPerson(g):
@@ -74,36 +84,41 @@ def mainProgram():
         print '4 Izpis osebe z max znancev'
         print '5 Izhod iz programa'
         user_in = raw_input("Vas izbor: ")
-        print user_in
         if user_in == '1':
-            houseName = raw_input("Vnesite ime hise: ")
+            input_label = "Vnesite ime hise: "
+            houseName = raw_input(input_label)
             while houseName not in ['House of Capulet', 'House of Montague', 'Ruling house of Verona']:
                 print 'Vnesli ste napacno ime hise ki ne obstaja.'
-                houseName = raw_input("Vnesite novo ime: ")
+                houseName = raw_input(input_label)
             f = familyHouse(g, houseName)
             print 'Osebe, ki prebivajo v hisi %s so:' % f
             # print f
         if user_in == '2':
-            name = raw_input("Vnesite ime: ")
+            input_label = "Vnesite ime: "
+            name = raw_input(input_label)
             while name not in names:
                 print 'Vnesli ste napacno ime, ki ni v druzinskem drevesu'
-                name = raw_input("Vnesite novo ime: ")
+                name = raw_input(input_label)
             print 'Znanci osebe %s' % name
             f = personFriends(g, name)
             print f
         if user_in == '3':
-            name = raw_input("Vnesite ime (Romeo, Juliet ONLY): ")
+            input_label = "Vnesite ime (Romeo, Juliet ONLY): "
+            name = raw_input(input_label)
             while name not in ['Romeo', 'Juliet']:
                 print 'Vnesli ste napacno ime, ki ni dovoljeno'
-                name = raw_input("Vnesite ime (Romeo, Juliet ONLY): ")
-            persons = PersonFriendsByHouse(g, name)
-            print 'Osebe v hisi kjer prebiva %s' % names
+                name = raw_input(input_label)
+            f = personFriends(g, name)
+            persons = personFriendsByHouse(g, f)
+            print 'Osebe v posameznih hisah ki imajo poznanstva z %s' % name
             print persons
         if user_in == '4':
+            #TODO: check for multiple persons with same number of persons
             tm = mostPopulatPerson(g)
             print 'Oseba z max znancev je %s' % tm[0]
         if user_in == '5':
             raise SystemExit
+
 
 g = makeGraph()
 
@@ -118,8 +133,7 @@ g.node['9']['house'] = 'Ruling house of Verona'
 g.node['10']['house'] = 'Ruling house of Verona'
 
 # print g.nodes(data=True)
-# print g.nodes('5')
-
+# print g.node['1']
 
 # print house
 # plt.show()

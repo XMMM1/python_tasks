@@ -12,7 +12,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/fis_python$dn2.coverage" NAME="dn2 Coverage Results" MODIFIED="1429565950965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dn2" />
+    <SUITE FILE_PATH="coverage/fis_python$dn2.coverage" NAME="dn2 Coverage Results" MODIFIED="1429641682748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dn2" />
     <SUITE FILE_PATH="coverage/fis_python$dn1.coverage" NAME="dn1 Coverage Results" MODIFIED="1429267068526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dn1" />
     <SUITE FILE_PATH="coverage/fis_python$5vaje.coverage" NAME="5vaje Coverage Results" MODIFIED="1429449493092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dn2" />
   </component>
@@ -31,7 +31,7 @@
       <file leaf-file-name="dn2.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dn2/dn2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="37" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.7122302" vertical-offset="1608" max-vertical-offset="2025">
+            <state line="60" column="29" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.4198895" vertical-offset="748" max-vertical-offset="2235">
               <folding>
                 <element signature="e#21#42#0" expanded="true" />
               </folding>
@@ -42,7 +42,7 @@
       <file leaf-file-name="loadData.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dn2/loadData.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="4" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+            <state line="17" column="4" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
               <folding />
             </state>
           </provider>
@@ -51,7 +51,7 @@
       <file leaf-file-name="relations.gml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dn2/relations.gml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="12" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1800">
+            <state line="55" column="12" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1800">
               <folding />
             </state>
           </provider>
@@ -60,7 +60,7 @@
       <file leaf-file-name="5vaje.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dn2/5vaje.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="793" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="780">
+            <state line="32" column="0" selection-start="793" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
@@ -338,6 +338,9 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -359,9 +362,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -428,26 +428,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1239" height="777" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21637426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21971595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2058433" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267776" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267776" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -467,6 +467,36 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dn2/dn2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="37" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0" vertical-offset="1653" max-vertical-offset="2025">
+          <folding>
+            <element signature="e#21#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dn2/loadData.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="4" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dn2/relations.gml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="12" selection-start="519" selection-end="519" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dn2/5vaje.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="793" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dn2/dn2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="11" selection-start="1262" selection-end="1262" vertical-scroll-proportion="0.0" vertical-offset="661" max-vertical-offset="1395">
@@ -501,9 +531,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dn1/dn1">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="46" selection-start="3436" selection-end="3436" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="2475">
-          <folding />
-        </state>
+        <state line="122" column="46" selection-start="3436" selection-end="3436" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="2475" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dn1/statistika3.txt">
@@ -541,9 +569,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dn1/dn1">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="44" selection-start="779" selection-end="795" vertical-scroll-proportion="0.64748204" vertical-offset="300" max-vertical-offset="2460">
-          <folding />
-        </state>
+        <state line="39" column="44" selection-start="779" selection-end="795" vertical-scroll-proportion="0.64748204" vertical-offset="300" max-vertical-offset="2460" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dn2/relations.gml">
@@ -569,7 +595,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dn2/dn2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="37" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.7122302" vertical-offset="1608" max-vertical-offset="2025">
+        <state line="60" column="29" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.4198895" vertical-offset="748" max-vertical-offset="2235">
           <folding>
             <element signature="e#21#42#0" expanded="true" />
           </folding>
