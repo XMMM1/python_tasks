@@ -51,7 +51,6 @@ def familyHouse(g, house_name):
                 house.append(names[int(id)])
     return ', '.join(house)
 
-
 def personFriendsByHouse(g, person):
     pe = {}
     for name in person:
@@ -59,19 +58,24 @@ def personFriendsByHouse(g, person):
         node = g.node[str(id)]
         if node:
             if node['house'] in pe:
-                val = pe[node['house']]
-                pe[node['house']] = val + ',' + names[id]
+                pe[node['house']] = pe[node['house']] + ',' + names[id]
             else:
                 pe[node['house']] = names[id]
+        else:
+            if 'homeless' in pe:
+                pe['homeless'] = pe['homeless'] + ',' + names[id]
+            else:
+                pe['homeless'] = names[id]
     return pe
 
 
 def mostPopulatPerson(g):
-    mostPopular = [0, 0]
+    mostPopular = [0 for i in range(0, len(names))]
     for n in range(0, len(names)):
-        if g.degree(str(n)) > mostPopular[1]:
-            mostPopular = [n, g.degree(str(n))]
-    mostPopular[0] = names[mostPopular[0]]
+        mostPopular[n] = g.degree(str(n))
+    maxFriends = max(mostPopular)
+    mostPopular = [names[i] for i, x in enumerate(mostPopular) if x == maxFriends]
+    # mostPopular[0] = names[mostPopular[0]]
     return mostPopular
 
 
@@ -91,7 +95,7 @@ def mainProgram():
                 print 'Vnesli ste napacno ime hise ki ne obstaja.'
                 houseName = raw_input(input_label)
             f = familyHouse(g, houseName)
-            print 'Osebe, ki prebivajo v hisi %s so:' % f
+            print 'Osebe, ki prebivajo v hisi '+houseName+' so: %s' % f
             # print f
         if user_in == '2':
             input_label = "Vnesite ime: "
@@ -109,13 +113,13 @@ def mainProgram():
                 print 'Vnesli ste napacno ime, ki ni dovoljeno'
                 name = raw_input(input_label)
             f = personFriends(g, name)
+            print f
             persons = personFriendsByHouse(g, f)
             print 'Osebe v posameznih hisah ki imajo poznanstva z %s' % name
             print persons
         if user_in == '4':
-            #TODO: check for multiple persons with same number of persons
             tm = mostPopulatPerson(g)
-            print 'Oseba z max znancev je %s' % tm[0]
+            print 'Oseba/e z max znancev je/so %s' % tm
         if user_in == '5':
             raise SystemExit
 

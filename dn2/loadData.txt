@@ -1,4 +1,4 @@
-Nourse,Juliet,Tybalt,Capulet,Friar Laurence,Romeo,Escalus,Paris,Benvolio,Montague,Mercutio
+Nourse,Juliet,Tybalt,Capulet,Friar Laurence,Romeo,Benvolio,Montague,Escalus,Mercutio,Paris
 0-1
 1-2
 1-3
